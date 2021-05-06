@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <title>Ethan Bennett » Projects</title>
+
+        <link rel="stylesheet" href="/css/main.css">
+        <style>
+            .colour {
+                font-size: 2rem;
+                font-weight: 700;
+                width: 100%;
+                height: 16rem;
+                border-radius: .5rem;
+                text-align: center;
+                background-color: #000;
+            }
+        </style>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+        <script src="./index.js"></script>
+    </head>
+    <body>
+        <div class="navbar">
+            <div class="container">
+                <button class="hamburger" onclick="$('.navbar a').toggleClass('showing')"></button>
+                <a href="/">Home</a>
+                <a href="/projects">Projects</a>
+            </div>
+        </div>
+        <div class="container">
+            <h2>Random C<span class="switcher">olour</span> Generator</h2>
+            <p>Pretty self explanatory. This tool generates random c<span class="switcher">olour</span>s with some info on the c<span class="switcher">olour</span>.</p>
+            <div class="colour" onclick="colour()"></div>
+            <p style="text-align:center" class="colour-data">Click the box above to generate a c<span class="switcher">olour</span>.</p>
+        </div>
+    </body>
+</html>
