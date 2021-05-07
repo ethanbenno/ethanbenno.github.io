@@ -9,6 +9,14 @@ h4 { font-size: 1.6rem; }
 h5 { font-size: 1.3rem; }
 h6 { font-size: 1rem; }
 
+::-moz-placeholder {
+    color: #717980;
+}
+
+::placeholder {
+    color: #717980;
+}
+
 a {
     color: #0c6ec9;
     text-decoration: none;
@@ -22,7 +30,7 @@ a:hover {
 hr {
     margin: 2rem 0;
     border: none;
-    border-top: .1rem solid #888;
+    border-top: .1rem solid #717980;
 }
 
 ul, ol, dl {
@@ -77,6 +85,69 @@ dd {
     cursor: pointer;
 }
 
+/* Buttons */
+
+.btn {
+    display: inline-block;
+    color: #fff !important;
+    background-color: #0c6ec9;
+    border: .1rem solid #0c6ec9;
+    border-radius: .25em;
+    padding: .5em 1em;
+    text-align: center;
+    text-decoration: none !important;
+}
+
+.btn:hover {
+    background-color: #0a61b2;
+    border: .1rem solid #0a61b2;
+    cursor: pointer;
+}
+
+.btn:focus {
+    background-color: #09549a;
+    border: .1rem solid #09549a;
+}
+
+/* Inputs & TextAreas */
+
+input {
+    border: .1rem solid #717980;
+    border-radius: .25em;
+    padding: .5em;
+    outline: none;
+}
+
+textarea {
+    width: 100%;
+    border: .1rem solid #717980;
+    border-radius: .25em;
+    padding: .5em;
+    outline: none;
+    resize: vertical;
+}
+
+input:focus, textarea:focus {
+    border-color: #0c6ec9;
+}
+
+/* Forms */
+
+form * {
+    margin-bottom: .5em;
+}
+
+label {
+    display: block;
+    margin-bottom: .5em;
+}
+
+label::after {
+    content: ":";
+}
+
+/* Mobile */
+
 @media only screen and (max-width: 32rem) {
     .hamburger {
         display: block;
@@ -88,6 +159,21 @@ dd {
 
     .navbar a.showing {
         display: block;
+    }
+
+    .btn {
+        display: block;
+    }
+
+    .btn:not(p > .btn) {
+        margin-bottom: .5em;
+    }
+
+    button.btn {
+        width: 100%;
+    }
+
+    input {
         width: 100%;
     }
 }
